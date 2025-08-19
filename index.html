@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wheather_app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="wheather_app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Wheather</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <a href="#" class="logo">
-            Kharl.
-        </a>
-        <nav>
-
-        </nav>
+      <a href="#" class="logo"> Kharl. </a>
+      <nav></nav>
     </header>
 
     <section class="wheather-section">
-        <div class="wheather-container">
-            <div class="wheather-content">
-                <header class="search">
-                    <div class="search-bar">
-                        <form class="wheather-form">
-                            <input type="text" class="cityinput" placeholder="Enter City">
-                        </form>
-                        <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
-                    </div>
-                </header>
-
-                <div class="location-temperature-container">
-                    <div class="location-container">
-                        <h3 id="cityName"></h3>
-                        <h4 id="date"></h4>
-                        <h1 id="emoji"></h1>
-                        <h1 id="description"></h1>
-                    </div>
-                    <div class="temperature-container">
-                        <h3 id="temp"></h3>
-                        <h3 id="highest-temp"><span id="lowest-temp" style="color: rgb(127, 195, 255);"></span>
-                        </h3>
-                    </div>
-                </div>
+      <div class="wheather-container">
+        <div class="wheather-content">
+          <header class="search">
+            <div class="search-bar">
+              <form class="wheather-form">
+                <input type="text" class="cityinput" placeholder="Enter City" />
+              </form>
+              <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
             </div>
+          </header>
+
+          <div class="empty-state">
+            <div class="empty-icon">⛅</div>
+            <h2 class="empty-title">Check the weather</h2>
+            <p class="empty-subtitle">
+              Type a city above and press Enter to see current conditions.
+            </p>
+            <p class="empty-hints">Try: Tokyo, Paris, New York</p>
+          </div>
+
+          <div class="location-temperature-container">
+            <div class="location-container">
+              <h3 id="cityName"></h3>
+              <h4 id="date"></h4>
+              <h1 id="emoji"></h1>
+              <h1 id="description"></h1>
+            </div>
+            <div class="temperature-container">
+              <h3 id="temp"></h3>
+              <h3 id="highest-temp">
+                <span id="lowest-temp" style="color: rgb(127, 195, 255)"></span>
+              </h3>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <script src="wheather_app.js"></script>
-</body>
+  </body>
 </html>
