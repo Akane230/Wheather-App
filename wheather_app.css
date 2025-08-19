@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+:root{
+    --body-background-color-1: rgba(233,197,191,1);
+    --body-background-color-2: rgba(113,146,194,1);
+}
+
+body{
+    background: linear-gradient(var(--body-background-color-2), var(--body-background-color-1));
+    height: 100vh;
+}
+
+*{
+    font-family: 'Plus Jakarta Sans';
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+}
+
+.header{
+    padding: 1rem;
+}
+
+.logo{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    left: 1rem;
+}
+
+.wheather-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90%;
+}
+
+.wheather-container{
+    display: flex;
+    width: clamp(20rem, 60%, 60rem);
+    height: 35rem;
+    background-image: url("cozy background.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.557);
+}
+
+.wheather-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: inherit;
+    backdrop-filter: blur(7px); 
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.search{
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar i{
+    position: relative;
+    margin-right: 3rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.cityinput {
+    opacity: 0;
+    width: 0;
+    padding: 10px;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.location-temperature-container{
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    text-shadow: -1px 1px rgb(67, 67, 67);
+    color: white;
+    align-items: center;
+    height: 60%;
+}
+
+.location-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 9%;
+}
+
+#cityName{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#date{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#emoji{
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+#description{
+    font-weight: 300;
+}
+
+.temperature-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9%;
+}
+
+#temp{
+    font-size: 4.5rem;
+    font-weight: 100;
+}
+
+
+/* animations */
+.cityinput.open {
+    opacity: 1;
+    width: 15rem;
+}
